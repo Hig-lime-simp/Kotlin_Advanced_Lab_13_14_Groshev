@@ -10,7 +10,11 @@ enum class Diffecilty{
     MEDIUM,
     HARD
 }
-fun main() {
+class  Quiz{
+    companion object StudentProgress{
+        var total: Int = 10
+        var answered: Int = 3
+    }
     val question1 = Question<String>(
         questionText = "Речка спятила с ума – По домам пошла сама. ___",
         answer = "водопровод",
@@ -28,8 +32,7 @@ fun main() {
         answer = 28,
         Diffecilty.HARD
     )
-
-    println(question1.answer)
-    println(question2.answer)
-    println(question3.answer)
+}
+fun main() {
+    println("${Quiz.answered} of ${Quiz.total} answered")
 }
